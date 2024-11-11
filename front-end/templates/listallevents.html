@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Gestão de Eventos</title>
+    <style>
+        img {
+            width: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>EventSystem</h1>
+    </header>
+
+    <main>
+        <div>
+            <label>Fitro</label>
+            <input id="txtid" type="number" required placeholder="Digite um ID">
+            <button id="btn-get-events-by-id" type="submit">
+                <img src="../assets/imgs/search.svg" alt="Icone de Busca">
+            </button>
+
+            <button id="btn-get-all-events-button">
+                Consultar Todos
+            </button>
+            <p id="mensagem">
+                Mensagem:
+            </p>
+
+        </div>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Horário Início</th>
+                <th>Hórario Término</th>
+                <th>Endereço</th>
+                <th>Qtd. Ingresso</th>
+                <th>Preço Ingresso</th>
+                <th>Organizador</th>
+                <th>Editar</th>
+                <th>Remover</th>
+            </thead>
+            <tbody id="table-result">
+
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Criado por Enrico de Andrade</p>
+        <a target="_blank" href="https://icons8.com/icon/BsNkc7jnuBPU/trash-can">Remove</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    </footer>
+    <script type="text/javascript" src="../assets/javascript/listbyid.js"></script>
+    <script type="text/javascript" src="../assets/javascript/listallevents.js"></script>
+</body>
+
+</html>
