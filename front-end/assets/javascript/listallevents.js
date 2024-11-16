@@ -14,7 +14,7 @@ async function getAllEvents() {
             msg.innerHTML = 'Mensagem: Consulta realizada com sucesso.';
             txtField.value = "";
         })
-        .catch(error => alert('Falha ao consultar todos os eventos'));
+        .catch(error => alert('Falha ao consultar todos os eventos\n' + error));
 }
 
 function showEvents(events) {
@@ -27,9 +27,9 @@ function showEvents(events) {
                 <td>${event.id}</td>
                 <td>${event.titulo}</td>
                 <td>${event.descricao}</td>
-                <td>${event.data}</td>
-                <td>${event.horarioInicio}</td>
-                <td>${event.horarioTermino}</td>
+                <td>${formatDate(event.data)}</td>
+                <td>${formatTime(event.horarioInicio)}</td>
+                <td>${formatTime(event.horarioTermino)}</td>
                 <td>${event.endereco}</td>
                 <td>${event.qtdIngressos}</td>
                 <td>${event.precoIngresso}</td>
@@ -48,6 +48,15 @@ function showEvents(events) {
         `;
     }
     table.innerHTML = rows;
+}
+
+function formatDate(date) {
+    return new Date(date).toLocaleDateString('pt-BR', {timeZone: "UTC"})
+}
+
+function formatTime(time) {
+    let [hour, minute, second] = time.split(':');
+    return `${hour}:${minute}`;
 }
 
 async function removeEvent(id) {
@@ -78,20 +87,10 @@ async function editForm(id) {
     const response = await fetch(`http://localhost:8080/event/list/${id}`);
     const event = await response.json();
     const params = new URLSearchParams({
-            id: event.id,
-            titulo: event.titulo,
-            descricao: event.descricao,
-            data: event.data,
-            horarioInicio: event.horarioInicio,
-            horarioTermino: event.horarioTermino,
-            endereco: event.endereco,
-            qtdIngressos: event.qtdIngressos,
-            precoIngresso: event.precoIngresso,
-            organizador: event.organizador
+        id: event.id
     }).toString();
 
     window.location.href = `editform.html?${params}`;
 }
 
 getAllEvents();
-

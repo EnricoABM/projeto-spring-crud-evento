@@ -4,51 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/imgs/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/listallevents.css">
     <title>Gestão de Eventos</title>
-    <style>
-        img {
-            width: 20px;
-        }
-
-    </style>
 </head>
 
 <body>
     <header>
-        <h1>EventSystem</h1>
+        <h1>Painel de Controle</h1>
     </header>
 
     <main>
-        <div>
-            <label>Fitro</label>
-            <input id="txtid" type="number" required placeholder="Digite um ID">
-            <button id="btn-get-events-by-id" type="submit">
-                <img src="../assets/imgs/search.svg" alt="Icone de Busca">
-            </button>
-
-            <button id="btn-get-all-events-button">
-                Consultar Todos
-            </button>
-            <p id="mensagem">
-                Mensagem:
-            </p>
-
+        <h2>Eventos</h2>
+        <div class="panel">
+            <div class="filter-panel">
+                <input id="txtid" type="number" required placeholder="Digite um ID">
+                <button id="btn-get-events-by-id" type="submit">
+                    <img src="../assets/imgs/search.svg" alt="Icone de Busca">
+                </button>
+            </div>
+            <div class="buttons">
+                <button id="btn-get-all-events-button">
+                    Consultar Todos
+                </button>
+    
+                <a href="addevent.html">
+                    <button id="btn-new-event">
+                        Novo Evento
+                    </button>
+                </a> 
+            </div>
         </div>
+        <p id="mensagem">
+            Mensagem:
+        </p>
         <table>
             <thead>
-                <th>ID</th>
-                <th>Título</th>
-                <th>Descrição</th>
-                <th>Data</th>
-                <th>Horário Início</th>
-                <th>Hórario Término</th>
-                <th>Endereço</th>
-                <th>Qtd. Ingresso</th>
-                <th>Preço Ingresso</th>
-                <th>Organizador</th>
-                <th>Editar</th>
-                <th>Remover</th>
+                <th id="cab-id">ID</th>
+                <th id="cab-titulo">Título</th>
+                <th id="cab-descricao">Descrição</th>
+                <th id="cab-data">Data</th>
+                <th id="cab-inicio">Início</th>
+                <th id="cab-fim">Fim</th>
+                <th id="cab-endereco">Endereço</th>
+                <th id="cab-qtd">Qtd. Ingressos</th>
+                <th id="cab-preco">Preço do Ingresso</th>
+                <th id="cab-org">Organizador</th>
+                <th id="cab-ops" colspan="2">Opções</th>
             </thead>
             <tbody id="table-result">
 
@@ -56,12 +58,8 @@
         </table>
     </main>
 
-    <footer>
-        <p>Criado por Enrico de Andrade</p>
-        <a target="_blank" href="https://icons8.com/icon/BsNkc7jnuBPU/trash-can">Remove</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-    </footer>
-    <script type="text/javascript" src="../assets/javascript/listbyid.js"></script>
     <script type="text/javascript" src="../assets/javascript/listallevents.js"></script>
+    <script type="text/javascript" src="../assets/javascript/listbyid.js"></script>
 </body>
 
 </html>

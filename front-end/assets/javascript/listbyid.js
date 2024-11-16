@@ -1,13 +1,4 @@
-
-
-const buttonGetById = document.getElementById('btn-get-events-by-id');
-const txtField = document.getElementById('txtid');
-
-buttonGetById.addEventListener('click', getElementById);
-txtField.addEventListener('focus', selectText)
-
-
-async function getElementById() {
+async function getEventById() {
     const input = document.getElementById('txtid');
     const id = input.value;
 
@@ -38,18 +29,22 @@ function showEvent(event) {
             <td>${event.id}</td>
             <td>${event.titulo}</td>
             <td>${event.descricao}</td>
-            <td>${event.data}</td>
-            <td>${event.horarioInicio}</td>
-            <td>${event.horarioTermino}</td>
+            <td>${formatDate(event.date)}</td>
+            <td>${formatTime(event.horarioInicio)}</td>
+            <td>${formatTime(event.horarioTermino)}</td>
             <td>${event.endereco}</td>
             <td>${event.qtdIngressos}</td>
             <td>${event.precoIngresso}</td>
             <td>${event.organizador}</td>
             <td>
-                <img src="../assets/imgs/edit.svg" class="edit-icon" onclick="editEvent(${event.id})" alt="Edit Icon">
+                <a class="edit-icon">
+                    <img src="../assets/imgs/edit.svg" onclick="editForm(${event.id})" alt="Edit Icon">
+                </a>
             </td>
             <td>
-                <img src="../assets/imgs/trash.svg" class="trash-icon" onclick="removeEvent(${event.id})" alt="Trash Icon">
+                <a class="trash-icon">
+                    <img src="../assets/imgs/trash.svg" onclick="removeEvent(${event.id})" alt="Trash Icon">
+                </a>
             </td>
         </tr>
     `;
@@ -64,3 +59,10 @@ function emptyTable() {
 function selectText(test) {
     test.target.select();
 }
+
+
+const buttonGetById = document.getElementById('btn-get-events-by-id');
+const txtField = document.getElementById('txtid');
+
+buttonGetById.addEventListener('click', getEventById);
+txtField.addEventListener('focus', selectText)

@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    height: 100vh;
+    background: lightgray;
+}
+
+/* CABEÇALHO */
+header {
+    color: #efb810;
+    background: black;
+    font-size: 18px;
+    padding: 0.8em 30px;
+}
+
+main {
+    width: max-content;
+    margin: 60px auto 0;
+    padding: 30px 50px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 5px;
+}
+
+
+/* TABELA  */
+/* Adiciona bordas na coluna e nas células */
+table, th, td {
+    border: 1px double black;
+    border-collapse: collapse;
+}
+
+table {
+    margin-top: 10px;
+}
+
+/* Cabeçalho em destaque */
+th {
+    background-color: black;
+    color: #efb810;
+}
+
+/* Reduz o tamanho da fonte do corpo devido ao espaço da tela */
+td {
+    font-size: 14px;
+    text-align: left;
+}
+
+/* Separa o conteúdo da célula em 5px*/
+th, td {
+    padding: 0px 6px;
+    word-break: break-word;
+}
+
+/* COLUNAS CABEÇALHO */
+/* Título */
+#cab-titulo {
+    width: 100px;
+}
+
+/* Descrição */
+#cab-descricao {
+    width: 160px;
+}
+
+/* Horário Inicio */
+#cab-inicio {
+    width: 55px;
+}
+
+/* Horário Fim */
+#cab-fim {
+    width: 55px;
+}
+
+/* Endereço */
+#cab-endereco {
+    width: 180px;
+}
+
+/* Qtd. Ingresso */
+#cab-qtd {
+    width: 90px;
+}
+
+/* Preço Ingresso */
+#cab-preco {
+    width: 90px;
+}
+
+/* Organizador */
+#cab-org {
+    width: 108px;
+}
+
+/* COLUNAS CORPO */
+/* ID */
+tbody tr td:nth-child(1) {
+    text-align: center;
+}
+
+/* Data */
+tbody tr td:nth-child(4) {
+    text-align: center;
+}
+
+/* Inicio */
+tbody tr td:nth-child(5) {
+    text-align: center;
+}
+
+/* Fim */
+tbody tr td:nth-child(6) {
+    text-align: center;
+}
+
+/* Preço */
+tbody tr td:nth-child(9)::before {
+    content: 'R$ ';
+}
+
+tbody tr td img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Editar e Remover*/
+tbody tr td:nth-child(11), tbody tr td:nth-child(12) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+tbody tr td img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+/* Destaca a linha destaca pelo mouse */
+tr:hover {
+    background-color: lightgray;
+}
+
+/* PAINEL */
+.panel {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-panel {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 27px;
+    column-gap: 5px;
+}
+
+.filter-panel button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.filter-panel img {
+    width: 20px;
+}
+
+.filter-panel input {
+    width: 200px;
+    height: 100%;
+    padding: 2px 8px;
+    border-radius: 5px;
+    border: 1px solid lightslategray;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 5px;
+}
+
+.buttons button {
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#btn-new-event {
+    background-color: rgba(34, 139, 34, 1);
+    color: white;
+}
+
+#btn-new-event:hover {
+    background-color: rgba(28, 112, 28, 1);
+}
+
+#btn-get-all-events-button {
+    background-color: rgba(0, 86, 179, 1);
+    color: white;
+}
+
+#btn-get-all-events-button:hover {
+    background-color: rgba(0, 64, 128, 1);
+}
+
+#mensagem {
+    margin-top: 10px;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+}
