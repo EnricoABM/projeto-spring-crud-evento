@@ -20,7 +20,7 @@ header {
 
 main {
     width: max-content;
-    margin: 60px auto 0;
+    margin: 30px auto 0;
     padding: 30px 50px;
     border-radius: 10px;
     background-color: white;
@@ -75,7 +75,7 @@ th, td {
 
 /* Horário Fim */
 #cab-fim {
-    width: 55px;
+    width: 77px;
 }
 
 /* Endereço */
@@ -156,7 +156,7 @@ tr:hover {
 .filter-panel {
     display: grid;
     grid-template-columns: repeat(2, max-content);
-    grid-template-rows: 27px;
+    grid-template-rows: 28px;
     column-gap: 5px;
 }
 
@@ -173,7 +173,7 @@ tr:hover {
 .filter-panel input {
     width: 200px;
     height: 100%;
-    padding: 2px 8px;
+    padding: 5px 8px;
     border-radius: 5px;
     border: 1px solid lightslategray;
 }
