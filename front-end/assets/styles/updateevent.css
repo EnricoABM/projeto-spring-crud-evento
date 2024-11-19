@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    height: 100vh;
+    background: lightgray;
+}
+
+/* CABEÇALHO */
+header {
+    color: #efb810;
+    background: black;
+    font-size: 18px;
+    padding: 0.8em 30px;
+}
+
+main {
+    width: max-content;
+    height: max-content;
+    margin: 30px auto 0;
+    padding: 30px 50px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px 5px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 14px;
+    color: rgb(0, 86, 179);
+    cursor: default;
+}
+
+a:hover {
+    color: rgba(0, 64, 128, 1);
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+#form-container {
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: repeat(14, 27px);
+    grid-template-areas: 
+        "lbl-id . ."
+        "inp-id inp-id inp-id"
+        "lbl-titulo . ."
+        "inp-titulo inp-titulo inp-titulo"
+        "lbl-descricao . ."
+        "inp-descricao inp-descricao inp-descricao"
+        "lbl-organizador . ."
+        "inp-organizador inp-organizador inp-organizador"
+        "lbl-endereco . ."
+        "inp-endereco inp-endereco inp-endereco" 
+        "lbl-data lbl-inicio lbl-termino"
+        "inp-data inp-inicio inp-termino"
+        "lbl-qtd . lbl-preco"
+        "inp-qtd . inp-preco"    
+    ;
+    column-gap: 10px;
+    align-items: end;
+    margin-bottom: 13px;
+}
+
+label {
+    text-align: left;
+}
+
+input {  
+    height: 100%;
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid lightslategray;
+    width: 100%;
+}
+
+#button {
+    text-align: end;
+}
+
+button {
+    height: 27px;
+    width: 130px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(34, 139, 34, 1);
+    color: white;
+}
+
+button:hover {
+    background-color: rgba(28, 112, 28, 1);
+}
+
+#lbl-id {
+    grid-area: lbl-id;
+}
+
+#id {
+    grid-area: inp-id;
+}
+
+#lbl-titulo {
+    grid-area: lbl-titulo;
+}
+
+#titulo {
+    grid-area: inp-titulo;
+}
+
+#lbl-descricao {
+    grid-area: lbl-descricao;
+}
+
+#descricao {
+    grid-area: inp-descricao;
+}
+
+#lbl-endereco {
+    grid-area: lbl-endereco;
+}
+
+#endereco {
+    grid-area: inp-endereco;
+}
+
+#lbl-data {
+    grid-area: lbl-data;
+}
+
+#data {
+    grid-area: inp-data;
+}
+
+#lbl-inicio {
+    grid-area: lbl-inicio;
+}
+
+#horarioInicio {
+    grid-area: inp-inicio;
+}
+
+#lbl-termino {
+    grid-area: lbl-termino;
+}
+
+#horarioTermino {
+    grid-area: inp-termino;
+}
+
+#lbl-organizador {
+    grid-area: lbl-organizador;
+}
+
+#organizador {
+    grid-area: inp-organizador;
+}
+
+#lbl-qtd {
+    grid-area: lbl-qtd;
+}
+
+#qtdIngressos {
+    grid-area: inp-qtd;
+}
+
+#lbl-preco {
+    grid-area: lbl-preco;
+}
+
+#precoIngresso {
+    grid-area: inp-preco;
+}
+

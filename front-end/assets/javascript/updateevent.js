@@ -33,21 +33,40 @@ async function updateEvent() {
     const dataForm = new FormData(form);
     const event = Object.fromEntries(dataForm);
 
-    const option = {
-        method: 'PUT',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(event)
-    };
-    const response = await fetch("http://localhost:8080/event/update", option);
-    if (response.status === 201) {
-        alert('Evento atualizado com sucesso');
-        window.location.href = "listallevents.html";
+    if (validateTime(event)) {
+        const option = {
+            method: 'PUT',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(event)
+        };
+        const response = await fetch("http://localhost:8080/event/update", option);
+        if (response.status === 201) {
+            alert('Evento atualizado com sucesso');
+            window.location.href = "listallevents.html";
+        } else {
+            alert('Falha ao atualizar');
+        }
     } else {
-        alert('Falha ao atualizar');
+        alert("Horário Inválido");
+    }
+
+}
+
+function validateTime(event) {
+    let initial = event.horarioInicio.split(":");
+    let final = event.horarioTermino.split(":");
+
+    let initalTime = parseInt(initial[0]) * 60 + parseInt(initial[1]);
+    let finalTime = parseInt(final[0]) * 60 + parseInt(final[1]);
+
+    if (initalTime < finalTime) {
+        return true;
+    } else {
+        return false;
     }
 }
 
-const form = document.getElementById('form-container');
+const form = document.getElementById('form');
 form.addEventListener('submit', updateEvent);
 
 fullFields();
