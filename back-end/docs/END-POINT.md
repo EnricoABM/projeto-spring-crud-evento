@@ -141,22 +141,9 @@ Cenário de Sucesso:
     ```
 
 Cenário de Sucesso:
-* Código: `201 CREATED`.
-* Corpo da Resposta: `JSON`.
-    ```json
-    {
-        "id": 2,
-        "titulo": "AnimeXtreme",
-        "descricao": "Maior evento de anime do sul do país",
-        "data": "2024-12-15",
-        "horarioInicio": "10:00:00",
-        "horarioTermino": "20:00:00",
-        "endereco": "Porto Alegre",
-        "qtdIngressos": 2000,
-        "precoIngresso": 90.0,
-        "organizador": "Centro de Eventos FIERGS"
-    }
-    ```
+* Código: `204 NO CONTENT `.
+* Corpo da Resposta: `null`.
+
 Cenário de Falha:
 * Código: `404 NOT FOUND`.
 * Corpo da Resposta: `null`.

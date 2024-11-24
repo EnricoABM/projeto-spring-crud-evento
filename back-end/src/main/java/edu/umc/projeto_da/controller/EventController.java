@@ -39,10 +39,10 @@ public class EventController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Event> updateEvent(@RequestBody Event event) {
+    public ResponseEntity<Void> updateEvent(@RequestBody Event event) {
         try {
             Event updatedEvent = eventService.updateEvent(event);
-            return new ResponseEntity<>(event, HttpStatus.CREATED);
+            return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
         } catch (IllegalArgumentException ex) {
             return ResponseEntity.notFound().build();
         }
