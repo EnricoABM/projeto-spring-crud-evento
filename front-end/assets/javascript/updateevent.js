@@ -41,6 +41,7 @@ async function updateEvent() {
         };
         const response = await fetch("http://localhost:8080/event/update", option);
         if (response.status === 201) {
+            console.log(event);
             alert('Evento atualizado com sucesso');
             window.location.href = "listallevents.html";
         } else {

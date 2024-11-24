@@ -39,7 +39,7 @@ public class EventoService {
         Event event = searchedEvent.get();
 
         event.setId(updatedEvent.getId());
-        event.setTitulo(event.getTitulo());
+        event.setTitulo(updatedEvent.getTitulo());
         event.setDescricao(updatedEvent.getDescricao());
         event.setData(updatedEvent.getData());
         event.setHorarioInicio(updatedEvent.getHorarioInicio());

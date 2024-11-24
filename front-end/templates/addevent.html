@@ -22,34 +22,36 @@
     <form id="form" onsubmit="return false">
       <div id="form-container">
         <label id="lbl-titulo">Título</label>
-        <input type="text" name="titulo" id="titulo" maxlength="30" required>
+        <input type="text" name="titulo" id="titulo" maxlength="30" tabindex="1" required>
 
         <label id="lbl-descricao">Descrição</label>
-        <input type="text" name="descricao" id="descricao" maxlength="50" required>
-
-        <label id="lbl-data">Data</label>
-        <input type="date" name="data" id="data" required>
-
-        <label id="lbl-inicio">Início</label>
-        <input type="time" name="horarioInicio" id="horarioInicio" required>
-
-        <label id="lbl-termino">Término</label>
-        <input type="time" name="horarioTermino" id="horarioTermino" required>
-
-        <label id="lbl-endereco">Endereço</label>
-        <input type="text" name="endereco" id="endereco" maxlength="60" required>
-        
-        <label id="lbl-qtd">Qtd. Ingressos</label>
-        <input type="number" name="qtdIngressos" id="qtdIngressos" min="0" required>
-
-        <label id="lbl-preco">Preço do Ingresso</label>
-        <input type="number" name="precoIngresso" id="precoIngresso" min="0" required>
+        <input type="text" name="descricao" id="descricao" maxlength="100" tabindex="2" required>
 
         <label id="lbl-organizador">Organizador</label>
-        <input type="text" name="organizador" id="organizador" maxlength="35" required>
+        <input type="text" name="organizador" id="organizador" maxlength="35" tabindex="3" required>
+
+        <label id="lbl-endereco">Endereço</label>
+        <input type="text" name="endereco" id="endereco" maxlength="100" tabindex="4" required>
+
+        <label id="lbl-data">Data</label>
+        <input type="date" name="data" id="data" tabindex="5" required>
+
+        <label id="lbl-inicio">Início</label>
+        <input type="time" name="horarioInicio" id="horarioInicio" tabindex="6" required>
+
+        <label id="lbl-termino">Término</label>
+        <input type="time" name="horarioTermino" id="horarioTermino" tabindex="7" required>
+        
+        <label id="lbl-qtd">Qtd. Ingressos</label>
+        <input type="number" name="qtdIngressos" id="qtdIngressos" min="0" tabindex="8" required>
+
+        <label id="lbl-preco">Preço do Ingresso</label>
+        <input type="number" name="precoIngresso" id="precoIngresso" min="0" tabindex="9" required>
+
+
       </div>
       <div id="button">        
-        <button type="submit" form="form" id="btn-cadastrar">
+        <button type="submit" form="form" id="btn-cadastrar" tabindex="10">
           Cadastrar Evento
         </button>
       </div>

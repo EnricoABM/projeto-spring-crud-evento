@@ -14,7 +14,7 @@ async function getAllEvents() {
             msg.innerHTML = 'Mensagem: Consulta realizada com sucesso.';
             txtField.value = "";
         })
-        .catch(error => alert('Falha ao consultar todos os eventos\n' + error));
+        .catch(error => alert('Falha ao consultar todos os eventos'));
 }
 
 function showEvents(events) {
